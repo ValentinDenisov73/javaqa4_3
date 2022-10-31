@@ -1,6 +1,6 @@
 public class CreditPaymentService {
-    public double calculate(double a, double b, double c) {
-        double d = a * (c / 12 / 100) * Math.pow(1 + c / 12 / 100, b) / ((Math.pow(1 + c / 12 / 100, b) - 1));
-        return d;
+    public double calculate(double creditAmount, double creditTerm, double percent) {
+        double monthlyPayment = creditAmount * (percent / 12 / 100) * Math.pow(1 + percent / 12 / 100, creditTerm) / ((Math.pow(1 + percent / 12 / 100, creditTerm) - 1));
+        return monthlyPayment;
     }
 }
